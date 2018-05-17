@@ -321,15 +321,21 @@ a:focus {
     -ms-text-size-adjust: 100%;
 }
 
+p {
+    width: 50%;
+    margin: 0 auto;
+}
+
 p,
 p a,
 p a:hover {
-    color: #fff;
+    color: rgb(255, 255, 255);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    font-weight: 400;
 }
 
 p a,
@@ -431,6 +437,7 @@ strong {
 .border-bg {
     position: absolute;
     background: rgb(72, 255, 0);
+    display: none;
 }
 
 @media only screen and (max-width: 640px) {
@@ -484,11 +491,10 @@ strong {
 
 .center-space-top,
 .center-space-bottom {
-    position: absolute;
     width: 100%;
     margin: auto;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     left: 0;
 }
 
@@ -511,8 +517,8 @@ strong {
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.25em;
-    bottom: -8px;
-    left: 2px;
+    /* bottom: -8px;
+    left: 2px; */
 }
 
 @media only screen and (max-width: 880px) {
@@ -1718,7 +1724,8 @@ section {
 }
 
 .services-block {
-    margin-top: -43px;
+    /* margin-top: -43px; */
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 880px) {
@@ -1825,7 +1832,7 @@ h2.section-subheading-light span:before {
 /* 18. contact */
 
 .contact-info-wrapper {
-    margin-top: -15px;
+    margin: 30px;
 }
 
 .contact-info-description {
@@ -2040,7 +2047,7 @@ a.button-link:hover i {
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    color: #5f5f5f;
+    color: #ffffff;
     margin: 22px auto 0 auto;
     padding: 0 15px;
 }
@@ -2482,16 +2489,18 @@ textarea:focus:-moz-placeholder {
 }
 
 .sign-up-modal.open {
-    width: -webkit-calc(100% - 220px);
+    /* width: -webkit-calc(100% - 220px);
     width: -moz-calc(100% - 220px);
     width: calc(100% - 220px);
     height: -webkit-calc(100% - 220px);
     height: -moz-calc(100% - 220px);
-    height: calc(100% - 220px);
-    top: 110px;
-    right: 110px;
-    bottom: 110px;
-    left: 110px;
+    height: calc(100% - 220px); */
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3278,6 +3287,10 @@ a:hover .c-btn {
     .mb_YTPBar span.mb_YTPUrl {
         display: none;
         visibility: hidden;
+    }
+    p {
+        width: 80%;
+        margin: 0 auto;
     }
 }
 

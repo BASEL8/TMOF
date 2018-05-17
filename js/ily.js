@@ -229,32 +229,38 @@ $(function() {
 
     // 10. countdown
     // 10.1. countdown SETUP
-    var end = new Date("06/01/2018 07:00 PM"); // FORMAT: month/day/year time
-    // 10.2. countdown script
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
+    function timer_2(id, time_A) {
+        var end = new Date(time_A); // FORMAT: month/day/year time
+        // 10.2. countdown script
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
 
-    function showRemaining() {
-        var now = new Date();
-        var distance = end - now;
-        if (distance < 0) {
-            clearInterval(timer);
-            document.getElementById("countdown").innerHTML = "EXPIRED.";
-            return;
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = "EXPIRED.";
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+            document.getElementById(id).innerHTML = days + "d, ";
+            document.getElementById(id).innerHTML += hours + "h, ";
+            document.getElementById(id).innerHTML += minutes + "m &amp; ";
+            document.getElementById(id).innerHTML += seconds + "s left";
         }
-        var days = Math.floor(distance / _day);
-        var hours = Math.floor((distance % _day) / _hour);
-        var minutes = Math.floor((distance % _hour) / _minute);
-        var seconds = Math.floor((distance % _minute) / _second);
-        document.getElementById("countdown").innerHTML = days + "d, ";
-        document.getElementById("countdown").innerHTML += hours + "h, ";
-        document.getElementById("countdown").innerHTML += minutes + "m &amp; ";
-        document.getElementById("countdown").innerHTML += seconds + "s left";
+        timer = setInterval(showRemaining, 1000);
     }
-    timer = setInterval(showRemaining, 1000);
+    timer_2("countdown_2", "09/10/2018 07:00 PM")
+    timer_2("countdown", "06/01/2018 07:00 PM")
+    timer_2("countdown_3", "12/08/2018 07:00 PM")
+
 
     // 11. borders
     function initAnimation() {
