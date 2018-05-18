@@ -1,23 +1,3 @@
-/*
-  [JS Index - plugins]
-  
-  ---
-  
-  Template Name: Ily - Under Construction Template
-  Author:  ex-nihilo
-  Version: 1.0
-*/
-
-/*
-  1. jQuery v2.2.4
-  2. core v1.0.1
-  3. jquery.mb.YTPlayer v3.1.4
-  4. Slick v1.6.0
-  5. Fullscreeneo v1.0.0
-  6. Countdown v1.6.3
-  7. Bootstrap v3.3.7
-*/
-
 // 1. jQuery v2.2.4
 /*! jQuery v2.2.4 | (c) jQuery Foundation | jquery.org/license */
 ! function(a, b) {
